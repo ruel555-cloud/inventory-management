@@ -101,94 +101,91 @@ export default {
 </script>
 
 <style scoped>
+/* Sits at the top of the content column now that the page header is gone;
+   the old top:70px was an offset for a header that no longer exists. */
 .filters-bar {
-  background: #f8fafc;
-  border-bottom: 1px solid #e2e8f0;
-  padding: 0.75rem 0;
+  background: var(--panel);
+  border-bottom: 1px solid var(--rule);
+  padding: var(--s3) 0;
   position: sticky;
-  top: 70px;
+  top: 0;
   z-index: 90;
 }
 
 .filters-container {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  max-width: var(--content-max);
+  padding: 0 var(--s8);
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--s4);
 }
 
 .filters-grid {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--s4);
   flex: 1;
+  flex-wrap: wrap;
 }
 
 .filter-group {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--s2);
 }
 
 .filter-group label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #64748b;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted);
   white-space: nowrap;
 }
 
 .filter-select {
-  padding: 0.4rem 0.75rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 0.813rem;
-  color: #0f172a;
-  background: white;
+  padding: var(--s1) var(--s3);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--r-control);
+  font-size: 0.8125rem;
+  color: var(--ink);
+  background: var(--panel);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color var(--t);
   font-weight: 500;
   min-width: 140px;
 }
 
-.filter-select:hover {
-  border-color: #94a3b8;
-}
+.filter-select:hover { border-color: var(--faint); }
 
 .filter-select:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-ring);
 }
 
 .reset-filters-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.4rem;
-  background: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  color: #64748b;
+  padding: var(--s1);
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-control);
+  color: var(--muted);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: color var(--t), border-color var(--t), background var(--t);
   flex-shrink: 0;
 }
 
 .reset-filters-btn:hover:not(:disabled) {
-  background: #f8fafc;
-  border-color: #cbd5e1;
-  color: #0f172a;
+  background: var(--inset);
+  border-color: var(--rule-strong);
+  color: var(--ink);
 }
 
 .reset-filters-btn:disabled {
-  opacity: 0.3;
+  opacity: 0.35;
   cursor: not-allowed;
 }
 
-.reset-filters-btn svg {
-  width: 18px;
-  height: 18px;
-}
+.reset-filters-btn svg { width: 18px; height: 18px; }
 </style>

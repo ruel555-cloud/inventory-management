@@ -134,8 +134,10 @@ const selectLanguage = (locale) => {
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 0.5rem);
-  right: 0;
+  /* Opens upward from the sidebar footer: anchored to the bottom of the
+     trigger and aligned left, since the rail is narrower than the menu. */
+  bottom: calc(100% + 0.5rem);
+  left: 0;
   min-width: 160px;
   background: white;
   border: 1px solid #e2e8f0;
