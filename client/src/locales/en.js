@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -125,8 +126,10 @@ export default {
       totalValue: 'Total Value',
       status: 'Status',
       expectedDelivery: 'Expected Delivery',
-      actualDelivery: 'Actual Delivery'
-    }
+      actualDelivery: 'Actual Delivery',
+      leadTime: 'Lead Time'
+    },
+    submittedOrders: 'Submitted Orders'
   },
 
   // Finance/Spending
@@ -185,6 +188,39 @@ export default {
       change: 'Change',
       trend: 'Trend',
       period: 'Period'
+    }
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Set a budget and order the forecast shortfalls it covers',
+    budgetTitle: 'Available Budget',
+    budgetLabel: 'Budget',
+    coversAll: 'Covers all shortfalls: {amount}',
+    recommendations: 'Recommended Items',
+    placeOrder: 'Place Order',
+    placing: 'Placing...',
+    orderPlaced: 'Order {orderNumber} submitted. It now appears in Orders.',
+    noRecommendations: 'This budget does not cover any forecast shortfall.',
+    days: '{count} days',
+    full: 'Full',
+    partial: 'Partial',
+    stats: {
+      budget: 'Budget',
+      allocated: 'Allocated',
+      remaining: 'Remaining',
+      items: 'Items'
+    },
+    table: {
+      sku: 'SKU',
+      itemName: 'Item Name',
+      shortfall: 'Shortfall',
+      quantity: 'Order Qty',
+      unitCost: 'Unit Cost',
+      lineTotal: 'Line Total',
+      leadTime: 'Lead Time',
+      funding: 'Funding'
     }
   },
 
